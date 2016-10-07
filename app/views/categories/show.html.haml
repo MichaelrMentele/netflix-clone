@@ -1,0 +1,15 @@
+%section.genre
+  %header.clearfix
+    %h1 #{@category.tag}
+    .genre_sorting
+      Sort by:
+      %select(name="")
+        %option(value="a-z") Title: A - Z
+        %option(value="z-a") Title: Z - A
+        %option(value="rating") Rating
+  %article.row
+    - @category.videos.each do |video|
+      = render partial: '/videos/video', locals: {video: video}
+
+    
+      
