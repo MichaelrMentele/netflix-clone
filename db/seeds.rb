@@ -49,6 +49,27 @@ movies = Video.create([
     small_cover_url: "/tmp/monk.jpg",
     large_cover_url: "/tmp/monk_large.jpg",
     category_id: 1
+  },
+  {
+    title: "Monk",
+    description: "Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah ",
+    small_cover_url: "/tmp/monk.jpg",
+    large_cover_url: "/tmp/monk_large.jpg",
+    category_id: 1
+  },
+  {
+    title: "Monk",
+    description: "Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah ",
+    small_cover_url: "/tmp/monk.jpg",
+    large_cover_url: "/tmp/monk_large.jpg",
+    category_id: 1
+  },
+  {
+    title: "Monk",
+    description: "Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah Lipsum dor, blah blah blah ",
+    small_cover_url: "/tmp/monk.jpg",
+    large_cover_url: "/tmp/monk_large.jpg",
+    category_id: 1
   }
 
   ])

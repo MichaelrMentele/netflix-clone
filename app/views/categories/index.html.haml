@@ -3,6 +3,6 @@
     %header
       %h3= link_to "#{category.tag}"
     .videos.row
-      - category.videos.each do |video|
+      - category.recent_videos.each do |video|
         = render partial: '/videos/video', locals: {video: video}
 
