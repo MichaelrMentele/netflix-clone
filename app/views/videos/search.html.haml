@@ -1,0 +1,6 @@
+%article.video_category
+  %header
+    %h3= "Search Results"
+  .videos.row
+    - @results.each do |result|
+      = render partial: '/videos/video', locals: {video: result}
