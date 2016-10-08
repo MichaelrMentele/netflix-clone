@@ -3,12 +3,7 @@ class Category < ActiveRecord::Base
   NUM_RECENT_VIDEOS = 6
 
   def recent_videos
-    sorted_videos = self.videos
-    if sorted_videos.size < NUM_RECENT_VIDEOS
-      return sorted_videos
-    else
-      return sorted_videos[-NUM_RECENT_VIDEOS..-1]
-    end
+    videos.first(NUM_RECENT_VIDEOS)
   end
 
 end
