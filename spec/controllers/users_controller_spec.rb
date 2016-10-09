@@ -10,9 +10,7 @@ describe UsersController do
 
   describe "POST create" do 
     context "with valid input" do
-      before do 
-        post :create, user: Fabricate.attributes_for(:user)
-      end
+      before { post :create, user: Fabricate.attributes_for(:user) }
 
       it "creates the user" do 
         expect(User.count).to eq(1)
@@ -23,9 +21,7 @@ describe UsersController do
       end
     end
     context "with invalid input" do 
-      before do 
-        post :create, user: { password: 'password', username: "m"}
-      end
+      before { post :create, user: { password: 'password', username: "m"} }
 
       it "does not create the user" do 
         expect(User.count).to eq(0)
