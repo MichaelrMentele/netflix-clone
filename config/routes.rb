@@ -14,7 +14,9 @@ Myflix::Application.routes.draw do
     end
   end
 
-  resources :sessions, only: [:new, :create]
+  get '/login', to: 'sessions#new'
+  post '/logout', to: 'sessions#destroy'
+  resources :sessions, only: [:create]
 
   get '/register', to: 'users#new'
   resources :users, only: [:create]
