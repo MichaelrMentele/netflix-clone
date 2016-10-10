@@ -65,14 +65,14 @@ describe Video do
   end
 
   describe "#average_rating" do 
-    it "computes the average there is at least one review"
+    let(:video) { Fabricate(:video) }
+    it "computes the average there is at least one review" do 
+      review1 = Fabricate(:review, rating: 1, video: video)
+      review2 = Fabricate(:review, rating: 3, video: video)
+      expect(video.average_rating).to eq(2)
+    end
     it "returns 0 if there is no reviews" do 
-      video = Fabricate(:video)
       expect(video.average_rating).to eq(0)
     end
-  end
-
-  describe "#rating_sum" do 
-
   end
 end
