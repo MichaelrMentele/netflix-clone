@@ -73,3 +73,15 @@ movies = Video.create([
   }
 
   ])
+
+kevin = User.create(username: "Kevin Wang", password: "pass", email: "kevin@wang.com")
+
+reviews = Review.create([
+  {
+    user: kevin, video: movies.first, rating: 3, description: "blah blah"
+  },
+  {
+    user: kevin, video: movies.first, rating: 4, description: "blah blah"
+  }
+
+  ])

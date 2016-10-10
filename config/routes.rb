@@ -12,6 +12,8 @@ Myflix::Application.routes.draw do
     collection do 
       post :search, to: "videos#search"
     end
+
+    resources :reviews, only: [:create]
   end
 
   get '/login', to: 'sessions#new'
