@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Category do
-  it {should have_many(:videos)}
-
+  it { should have_many(:videos) }
+  it { should validate_presence_of(:tag) }
   describe "recent_videos" do 
     it "should return the NUM_RECENT_VIDEOS of recent videos if more than six" do 
       test = Category.create(tag: "test")

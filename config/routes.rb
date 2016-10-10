@@ -6,7 +6,7 @@ Myflix::Application.routes.draw do
   #########################
 
   get '/home', to: 'categories#index'
-  get '/genre/:id', to: 'categories#show'
+  get '/genre/:id', to: 'categories#show', as: "category"
 
   resources :videos, only: [:show] do 
     collection do 
@@ -15,6 +15,8 @@ Myflix::Application.routes.draw do
 
     resources :reviews, only: [:create]
   end
+
+  get 'my_queue', to: 'queue_items#index'
 
   get '/login', to: 'sessions#new'
   post '/logout', to: 'sessions#destroy'

@@ -10,6 +10,12 @@ class Video < ActiveRecord::Base
   end
   
   def average_rating
-    self.reviews.inject(0) { |sum, review| sum + review.rating } / self.reviews.size
+    reviews.size > 0 ? rating_sum / reviews.size : 0
+  end
+
+  private
+  
+  def rating_sum
+    reviews.inject(0) { |sum, review| sum + review.rating }
   end
 end
