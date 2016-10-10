@@ -2,12 +2,13 @@ require 'spec_helper'
 
 describe ReviewsController do
   describe "POST create" do 
+    let(:video) { Fabricate(:video) }
     context "with authenticated users" do 
+      let(:current_user) { Fabricate(:user) }
+      before { session[:user_id] = current_user.id }
+
       context "with valid inputs" do 
-        let(:video) { Fabricate(:video) }
-        let(:current_user) { Fabricate(:user) }
         before do 
-          session[:user_id] = current_user.id
           post :create, review: Fabricate.attributes_for(:review), video_id: video.id
         end
 
@@ -29,10 +30,6 @@ describe ReviewsController do
       end
 
       context "with invalid input" do 
-        let(:video) { Fabricate(:video) }
-        let(:current_user) { Fabricate(:user) }
-        before { session[:user_id] = current_user.id }
-
         it "does not create a review" do 
           post :create, review: {rating: 4}, video_id: video.id
           expect(Review.count).to eq(0)
