@@ -17,7 +17,7 @@ Myflix::Application.routes.draw do
   end
 
   get '/my_queue', to: 'queue_items#index'
-  resources :queue_items, only: [:create]
+  resources :queue_items, only: [:create, :destroy, :update]
 
   get '/login', to: 'sessions#new'
   post '/logout', to: 'sessions#destroy'
