@@ -84,4 +84,67 @@ describe QueueItemsController do
       expect(response).to redirect_to login_path
     end
   end
+
+  describe "PATCH update_queue" do 
+    context "auth'd user" do 
+      let(:current_user) { Fabricate(:user) }
+      before { session[:user_id] = current_user.id }
+
+      context "with valid inputs" do 
+        it "redirects to my queue" do 
+          patch :update_queue, queue_items: []
+          expect(response).to redirect_to my_queue_path
+        end
+
+        it "reorders queue items" do
+          item1 = Fabricate(:queue_item, user: current_user, position: 2)
+          item2 = Fabricate(:queue_item, user: current_user, position: 1)
+          patch :update_queue, queue_items: [{id: item1.id, position: 1}, {id: item2.id, position: 2}]
+          expect(current_user.queue_items).to eq([item1, item2])
+        end
+
+        it "normalizes the position numbers" do 
+          item1 = Fabricate(:queue_item, user: current_user, position: 1)
+          item2 = Fabricate(:queue_item, user: current_user, position: 2)
+          patch :update_queue, queue_items: [{id: item1.id, position: 3}, {id: item2.id, position: 2}]
+          expect(item1.reload.position).to eq(2)
+          expect(item2.reload.position).to eq(1)
+        end
+      end
+
+      context "with invalid inputs" do 
+        let(:item) { Fabricate(:queue_item, user: current_user, position: 1) }
+        before { patch :update_queue, queue_items: [{id: item.id, position: 2.5}] }
+        it "redirects to the my queue page" do 
+          expect(response).to redirect_to my_queue_path
+        end
+
+        it "sets the flash error message" do
+          expect(flash[:error]).to be_present
+        end
+
+        it "does not change the queue items" do 
+          expect(item.reload.position).to eq(1)
+        end
+      end
+
+      context "with queue items that do not belong to the current user" do 
+        it "does not change the queue items" do 
+          bob = Fabricate(:user)
+          item1 = Fabricate(:queue_item, user: bob, position: 1)
+          item2 = Fabricate(:queue_item, user: bob, position: 2)
+          patch :update_queue, queue_items: [{id: item1.id, position: 3}, {id: item2.id, position: 2}]
+          expect(item1.position).to eq(1)
+        end
+      end
+    end
+
+    context "invalid user" do 
+      it "redirects to login" do
+        # no user so patch will be filtered
+        patch :update_queue
+        expect(response).to redirect_to login_path
+      end
+    end
+  end
 end
