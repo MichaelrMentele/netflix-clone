@@ -4,7 +4,7 @@ describe VideosController do
   describe "GET show" do 
     context "authenticated user" do 
       let(:video) { Fabricate(:video) }
-      before { session[:user_id] = Fabricate(:user).id }
+      before { set_current_user }
 
       it "sets @video" do 
         get :show, id: video.id
@@ -29,7 +29,7 @@ describe VideosController do
 
   describe "GET search" do 
     it "sets @results if user authenticated" do 
-      session[:user_id] = Fabricate(:user).id
+      set_current_user
       test = Fabricate(:video, title: "test")
 
       get :search, search_term: "est"

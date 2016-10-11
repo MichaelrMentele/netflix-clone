@@ -18,8 +18,7 @@ describe QueueItemsController do
   describe "POST create" do 
     let(:video) { Fabricate(:video) }
     context "authenticated user" do 
-      let(:current_user) { Fabricate(:user) }
-      before { session[:user_id] = current_user.id }
+      before { set_current_user }
 
       it "redirects to my queue page" do 
         post :create, video_id: video.id
@@ -60,8 +59,7 @@ describe QueueItemsController do
 
   describe "DELETE destroy" do 
     context "auth'd user" do 
-      let!(:current_user) { Fabricate(:user) }
-      before { session[:user_id] = current_user.id }
+      before { set_current_user }
 
       it "deletes the queue item" do
         queue_item = Fabricate(:queue_item, user: current_user)
@@ -97,8 +95,7 @@ describe QueueItemsController do
 
   describe "PATCH update_queue" do 
     context "auth'd user" do 
-      let(:current_user) { Fabricate(:user) }
-      before { session[:user_id] = current_user.id }
+      before { set_current_user }
 
       context "with valid inputs" do 
         it "redirects to my queue" do 
@@ -107,15 +104,17 @@ describe QueueItemsController do
         end
 
         it "reorders queue items" do
-          item1 = Fabricate(:queue_item, user: current_user, position: 2)
-          item2 = Fabricate(:queue_item, user: current_user, position: 1)
+          video = Fabricate(:video)
+          item1 = Fabricate(:queue_item, user: current_user, video: video, position: 2)
+          item2 = Fabricate(:queue_item, user: current_user, video: video, position: 1)
           patch :update_queue, queue_items: [{id: item1.id, position: 1}, {id: item2.id, position: 2}]
           expect(current_user.queue_items).to eq([item1, item2])
         end
 
         it "normalizes the position numbers" do 
-          item1 = Fabricate(:queue_item, user: current_user, position: 1)
-          item2 = Fabricate(:queue_item, user: current_user, position: 2)
+          video = Fabricate(:video)
+          item1 = Fabricate(:queue_item, user: current_user, video: video, position: 1)
+          item2 = Fabricate(:queue_item, user: current_user, video: video, position: 2)
           patch :update_queue, queue_items: [{id: item1.id, position: 3}, {id: item2.id, position: 2}]
           expect(item1.reload.position).to eq(2)
           expect(item2.reload.position).to eq(1)
@@ -123,7 +122,8 @@ describe QueueItemsController do
       end
 
       context "with invalid inputs" do 
-        let(:item) { Fabricate(:queue_item, user: current_user, position: 1) }
+        let!(:video) { Fabricate(:video) }
+        let!(:item) { Fabricate(:queue_item, user: current_user, video: video, position: 1) }
         before { patch :update_queue, queue_items: [{id: item.id, position: 2.5}] }
         it "redirects to the my queue page" do 
           expect(response).to redirect_to my_queue_path
