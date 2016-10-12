@@ -16,9 +16,10 @@ feature "user interacts with the queue" do
     sign_in
 
     [monk, south_park, futurama].each do |video|
-      visit home_path
-      view(video)
       add_to_queue(video)
+      expect_video_to_be_in_queue(video)
+      visit video_path(video)
+      expect_queue_link_to_be_hidden
     end
 
     visit my_queue_path
@@ -48,9 +49,15 @@ def view(video)
 end
 
 def add_to_queue(video)
+  visit home_path
+  view(video)
   click_link "+ My Queue"
-  page.should have_content(video.title)
+end
 
-  visit video_path(video)
+def expect_video_to_be_in_queue(video)
+  page.should have_content(video.title)
+end
+
+def expect_queue_link_to_be_hidden
   page.should_not have_content "+ My Queue"
 end
