@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 feature 'User signs in' do 
-  background do 
-  end
-  
-  scenario "with existing username" do 
-    visit root_path
+  scenario "with valid email and password" do 
+    alice = Fabricate(:user)
+    sign_in(alice)
+    page.should have_content alice.username
   end
 end
