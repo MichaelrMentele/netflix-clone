@@ -15,8 +15,8 @@ describe Video do
     it "returns an array of one video for an exact match" do
       test = Video.create(
         {
-        title: "test",
-        description: "can't be empty"
+          title: "test",
+          description: "can't be empty"
         }
       )
       matches = Video.search_by_title("test")
@@ -26,12 +26,12 @@ describe Video do
     it "returns array of one for partial match" do
       Video.create([
         {
-        title: "testing",
-        description: "can't be empty"
+          title: "testing",
+          description: "can't be empty"
         },
         {
-        title: "dog",
-        description: "can't be empty"
+          title: "dog",
+          description: "can't be empty"
         },
       ])
       matches = Video.search_by_title("test")

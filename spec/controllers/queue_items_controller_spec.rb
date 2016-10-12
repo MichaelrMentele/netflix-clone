@@ -10,9 +10,10 @@ describe QueueItemsController do
       get :index
       expect(assigns(:queue_items)).to match_array([queue_item1, queue_item2])
     end
-    it "redirects to sign in for unauthenticated users" do 
-      get :index
-      expect(response).to redirect_to login_path
+    context "not signed in" do 
+      it_behaves_like "require_sign_in" do 
+        let(:action) { get :index }
+      end
     end
   end
   describe "POST create" do 
@@ -49,10 +50,9 @@ describe QueueItemsController do
         expect(QueueItem.count).to eq(1)
       end
     end
-    context "unauthenticated user" do 
-      it "redirects to the sign in page" do 
-        post :create, video_id: video.id
-        expect(response).to redirect_to login_path
+    context "not signed in" do 
+      it_behaves_like "require_sign_in" do 
+        let(:action) { post :create, video_id: video.id }
       end
     end
   end
@@ -87,9 +87,10 @@ describe QueueItemsController do
       end
     end
 
-    it "redirects unauth user to login" do 
-      delete :destroy, id: 1
-      expect(response).to redirect_to login_path
+    context "not signed in" do 
+      it_behaves_like "require_sign_in" do 
+        let(:action) { delete :destroy, id: 1 }
+      end
     end
   end
 
@@ -149,11 +150,9 @@ describe QueueItemsController do
       end
     end
 
-    context "invalid user" do 
-      it "redirects to login" do
-        # no user so patch will be filtered
-        patch :update_queue
-        expect(response).to redirect_to login_path
+    context "not signed in" do 
+      it_behaves_like "require_sign_in" do 
+        let(:action) { patch :update_queue }
       end
     end
   end
