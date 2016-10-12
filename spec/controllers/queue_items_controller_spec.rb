@@ -10,12 +10,12 @@ describe QueueItemsController do
       get :index
       expect(assigns(:queue_items)).to match_array([queue_item1, queue_item2])
     end
-    context "not signed in" do 
-      it_behaves_like "require_sign_in" do 
-        let(:action) { get :index }
-      end
+
+    it_behaves_like "require_sign_in" do 
+      let(:action) { get :index }
     end
   end
+  
   describe "POST create" do 
     let(:video) { Fabricate(:video) }
     context "authenticated user" do 
@@ -50,10 +50,9 @@ describe QueueItemsController do
         expect(QueueItem.count).to eq(1)
       end
     end
-    context "not signed in" do 
-      it_behaves_like "require_sign_in" do 
-        let(:action) { post :create, video_id: video.id }
-      end
+  
+    it_behaves_like "require_sign_in" do 
+      let(:action) { post :create, video_id: video.id }
     end
   end
 
@@ -87,10 +86,8 @@ describe QueueItemsController do
       end
     end
 
-    context "not signed in" do 
-      it_behaves_like "require_sign_in" do 
-        let(:action) { delete :destroy, id: 1 }
-      end
+    it_behaves_like "require_sign_in" do 
+      let(:action) { delete :destroy, id: 1 }
     end
   end
 
@@ -150,10 +147,8 @@ describe QueueItemsController do
       end
     end
 
-    context "not signed in" do 
-      it_behaves_like "require_sign_in" do 
-        let(:action) { patch :update_queue }
-      end
+    it_behaves_like "require_sign_in" do 
+      let(:action) { patch :update_queue }
     end
   end
 end
