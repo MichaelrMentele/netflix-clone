@@ -1,8 +1,8 @@
-def set_current_user(clear=false)
+def set_current_user(clear=false, user=nil)
   if clear
     session[:user_id] = nil
   else
-    session[:user_id] = Fabricate(:user).id
+    session[:user_id] = user || Fabricate(:user).id
   end
 end
 
