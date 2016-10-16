@@ -18,14 +18,26 @@ feature "social" do
     visit home_path
     view(monk)
 
-    click_link(bob.username)
+    navigate_to_reviewer_profile(user)
     page.should have_content bob.username
 
-    click_link("Follow")
+    follow(bob)
     page.should have_content "People I Follow"
     page.should have_content bob.username
 
-    find_link(href: "/relationships/#{Relationship.first.id}" ).click
+    unfollow(bob)
     page.should_not have_content bob.username
   end
+end
+
+def navigate_to_reviewer_profile(user)
+  click_link(user.username)
+end
+
+def follow(user)
+  click_link("Follow")
+end
+
+def unfollow(user)
+  find_link(href: "/relationships/#{Relationship.first.id}" ).click
 end
