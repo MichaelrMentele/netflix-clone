@@ -1,9 +1,3 @@
-
-# go to videos / home pages
-# add a few videos
-# reorder those videos
-# verify they come back in that order
-
 require 'spec_helper'
 
 feature "user interacts with the queue" do 

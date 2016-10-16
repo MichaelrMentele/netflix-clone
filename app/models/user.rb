@@ -20,6 +20,6 @@ class User < ActiveRecord::Base
   end
 
   def follows?(leader)
-    Relationship.where(leader_id: leader.id, follower_id: current_user.id).exists?
+    Relationship.where(leader_id: leader.id, follower_id: id).exists?
   end
 end
