@@ -18,7 +18,7 @@ feature "social" do
     visit home_path
     view(monk)
 
-    navigate_to_reviewer_profile(user)
+    navigate_to_reviewer_profile(bob)
     page.should have_content bob.username
 
     follow(bob)

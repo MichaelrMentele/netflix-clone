@@ -8,7 +8,6 @@ gem 'haml-rails'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
-gem 'pg'
 gem 'bootstrap_form'
 gem 'bcrypt'
 
@@ -38,5 +37,6 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'puma'
+  gem 'pg'
 end
 
