@@ -1,4 +1,4 @@
-def set_current_user(clear=false, user=nil)
+def set_current_user(user: nil, clear: false)
   if clear
     session[:user_id] = nil
   else

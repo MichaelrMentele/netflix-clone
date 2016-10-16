@@ -5,7 +5,7 @@
     %ul.col-md-4.clearfix
       %li= link_to "Videos", home_path
       %li= link_to "My Queue", my_queue_path
-      %li= link_to "People"
+      %li= link_to "People", people_path
     = form_tag search_videos_path, method: "get", class: "col-md-5 navbar-form" do 
       = text_field_tag "search_term", nil, placeholder: "Search..."
       = submit_tag "Submit"
