@@ -28,4 +28,5 @@ class RelationshipsController < ApplicationController
       render 'users/show'
     end
   end
+
 end

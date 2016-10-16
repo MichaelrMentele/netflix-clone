@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
   def in_queue?(video)
     queue_items.map(&:video).include?(video)
   end
+
+  def follows?(leader)
+    Relationship.where(leader_id: leader.id, follower_id: current_user.id).exists?
+  end
 end
