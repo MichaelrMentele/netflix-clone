@@ -99,6 +99,7 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.3)
       pry (~> 0.9.10)
+    puma (3.6.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -196,6 +197,7 @@ DEPENDENCIES
   pg
   pry
   pry-nav
+  puma
   rails (= 4.1.1)
   rails_12factor
   rspec-rails (= 2.99)
