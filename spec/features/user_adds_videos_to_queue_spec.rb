@@ -37,11 +37,6 @@ def expect_video_position(video, pos)
   expect(find("#video_#{video.id}").value).to eq("#{pos}")
 end
 
-def view(video)
-  find("a[href='/videos/#{video.id}']").click
-  page.should have_content video.title
-end
-
 def add_to_queue(video)
   visit home_path
   view(video)
