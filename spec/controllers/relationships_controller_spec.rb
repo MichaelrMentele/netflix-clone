@@ -53,12 +53,12 @@ describe RelationshipsController do
       expect(alice.following_relationships.first.leader).to eq(bob)
     end
     it "does not allow a user to follow the same user more than once" do
-      post :create, leader_id: bob.id
+      Fabricate(:relationship, leader_id: bob.id, follower: alice)
       post :create, leader_id: bob.id
       expect(alice.following_relationships.count).to eq(1)
     end
     it "redirects to the current users people page" do 
-      post :create, leader_id: 3
+      post :create, leader_id: bob.id
       expect(response).to redirect_to people_path
     end
     it "does not allow one to follow themselves" do 
@@ -66,7 +66,7 @@ describe RelationshipsController do
       expect(alice.following_relationships.count).to eq(0)
     end
     it_behaves_like "require_sign_in" do
-      let(:action) { post :create, leader_id: 3 }
+      let(:action) { post :create, leader_id: bob.id}
     end
   end
 end

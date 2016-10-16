@@ -19,11 +19,13 @@ class RelationshipsController < ApplicationController
 
   def create
     relationship = Relationship.new(leader_id: params[:leader_id], follower_id: current_user.id)
+    @user = User.find(params[:leader_id])
     if relationship.unique? and not relationship.follow_self? and relationship.save
-
+      flash[:notice] = "You are now following #{@user.username}"
+      redirect_to people_path
     else
-
+      flash[:errors] = "I'm sorry, that didn't work. Are you already following that person?"
+      render 'users/show'
     end
-    redirect_to people_path
   end
 end
