@@ -49,6 +49,8 @@ describe InvitationsController do
         post :create, invitation: { recipient_name: "Joe" }
       end 
 
+      after { ActionMailer::Base.deliveries.clear }
+
       it "renders the invite page" do 
         expect(response).to render_template :new
       end
@@ -58,7 +60,6 @@ describe InvitationsController do
       end
 
       it "does not send an email" do 
-        ActionMailer::Base.deliveries
         expect(ActionMailer::Base.deliveries).to be_empty
       end
 

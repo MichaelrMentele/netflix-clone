@@ -18,6 +18,11 @@ def sign_in(user=nil)
   click_button "Sign in"
 end
 
+def sign_out
+  click_link "Welcome"
+  click_link "Sign Out"
+end
+
 def view(video)
   find("a[href='/videos/#{video.id}']").click
   page.should have_content video.title

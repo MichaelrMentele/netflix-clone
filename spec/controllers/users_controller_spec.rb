@@ -38,17 +38,17 @@ describe UsersController do
         let(:alice) { Fabricate(:user) }
         let(:invitation) { Fabricate(:invitation, inviter: alice, recipient_email: "joe@example.com") }
         before do 
-          post :create, user: { email: 'joe@example.com', password: "password", username: "joe" }, invitation_token: invitation.token
+          post :create, user: { email: 'joe@example.com', password: "password", username: "joe" }, invitation: { token: invitation.token }
         end
 
         it "makes the user follow inviter" do 
           joe = User.find_by(email: 'joe@example.com')
-          expect(joe.follows?(alice)).to be_true
+          expect(joe.follows?(alice)).to eq(true)
         end
 
         it "makes inviter follow the user" do 
           joe = User.find_by(email: 'joe@example.com')
-          expect(alice.follows?(joe)).to be_true
+          expect(alice.follows?(joe)).to eq(true)
         end
 
         it "expires the invitation upon acceptance" do 
@@ -107,7 +107,7 @@ describe UsersController do
       end
 
       it "sets @invitation_token" do 
-        expect(assigns(:invitation_token)).to eq(invitation.token)
+        expect(assigns(:invitation)).to eq(invitation)
       end
     end 
 

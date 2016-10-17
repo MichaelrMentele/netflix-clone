@@ -19,5 +19,6 @@ feature 'User resets passwords' do
     click_button "Sign in"
     expect(page).to have_content("Welcome, #{alice.username}")
   end
-
 end
+
+ActionMailer::Base.deliveries.clear

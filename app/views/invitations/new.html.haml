@@ -5,20 +5,8 @@
         %header
           %h1 Invite a friend to join MyFlix!
         %fieldset
-          .form-group
-            = f.label :recipient_name, "Friend's Name"
-            .row
-              .col-sm-4
-                = f.text_field :recipient_name
-          .form-group
-            = f.label :recipient_email, "Friend's Email Address"
-            .row
-              .col-sm-4
-                = f.email_field :recipient_email
-          .form-group
-            = f.label :message, "Invitation Message"
-            .row
-              .col-sm-6
-                = f.text_area :message, rows: 6, placeholder: "Please join this really cool site!"
+          = f.text_field :recipient_name, label: "Friend's Name"
+          = f.email_field :recipient_email, label: "Friend's Email Address"
+          = f.text_area :message, label: "Invitation Message", rows: 6, placeholder: "Please join this really cool site!"
         %fieldset.form-group.action
           %input(type="submit" value="Send Invitation" class="btn btn-default")
