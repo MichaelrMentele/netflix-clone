@@ -1,6 +1,8 @@
+require_relative 'concerns/tokenable'
+
 class User < ActiveRecord::Base
   include Tokenable
-  
+
   has_many :reviews, -> {order "created_at DESC"}
   has_many :queue_items, -> { order "position ASC"}
   has_many :leading_relationships, class_name: "Relationship", foreign_key: :leader_id

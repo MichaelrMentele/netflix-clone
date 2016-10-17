@@ -34,7 +34,8 @@ class UsersController < ApplicationController
   private
 
   def handle_invitation
-    if params[:invitation].present?
+    binding.pry
+    if params[:invitation][:token].present?
       invitation = Invitation.find_by(params[:invitation])
       @user.follow(invitation.inviter)
       invitation.inviter.follow(@user)
