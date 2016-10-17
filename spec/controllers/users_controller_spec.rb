@@ -49,7 +49,7 @@ describe UsersController do
     end
 
     context "sending emails" do
-      after { ActionMailer::Base.deliveries.clear }
+      before { ActionMailer::Base.deliveries.clear }
       
       it "sends an email to the new user with valid inputs" do
         post :create, user: { password: 'pass', username: 'mike', email: 'test@test.com'}

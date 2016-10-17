@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   has_secure_password validations: false
 
+  before_create :generate_token
+
   def normalize_queue_item_positions
     queue_items.each_with_index do |queue_item, idx|
       queue_item.update_attributes(position: idx + 1)
@@ -21,5 +23,11 @@ class User < ActiveRecord::Base
 
   def follows?(leader)
     Relationship.where(leader_id: leader.id, follower_id: id).exists?
+  end
+
+  private
+
+  def generate_token
+    self.token = SecureRandom.urlsafe_base64
   end
 end
