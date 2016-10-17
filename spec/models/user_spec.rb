@@ -27,4 +27,18 @@ describe User do
       expect(user.in_queue?(video)).to be false
     end
   end
+
+  describe "#follow" do 
+    it "follows another user" do 
+      alice = Fabricate(:user)
+      bob = Fabricate(:user)
+      alice.follow(bob)
+      expect(alice.follows?(bob)).to eq(true)
+    end
+    it "does not follow oneself" do 
+      alice = Fabricate(:user)
+      alice.follow(alice)
+      expect(alice.follows?(alice)).to eq(false)
+    end
+  end
 end

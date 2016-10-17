@@ -28,6 +28,7 @@ Myflix::Application.routes.draw do
 
   ### Users ###
   get '/register', to: 'users#new'
+  get 'register/:token', to: 'users#new_with_invitation_token', as: 'register_with_token'
   resources :users, only: [:create, :show]
 
   get '/people', to: 'relationships#index'
@@ -38,5 +39,8 @@ Myflix::Application.routes.draw do
   resources :forgot_passwords, only: [:create]
 
   resources :password_resets, only: [:show, :create]
-  get 'expired_token', to: 'password_resets#expired_token'
+  get 'expired_token', to: 'pages#expired_token'
+
+  resources :invitations, only: [:new, :create]
+
 end

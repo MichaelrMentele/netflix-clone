@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     queue_items.map(&:video).include?(video)
   end
 
+  def follow(leader)
+    Relationship.create(leader_id: leader.id, follower_id: id) unless self == leader
+  end
+
   def follows?(leader)
     Relationship.where(leader_id: leader.id, follower_id: id).exists?
   end
