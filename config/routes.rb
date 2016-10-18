@@ -16,6 +16,10 @@ Myflix::Application.routes.draw do
     resources :reviews, only: [:create]
   end
 
+  namespace :admin do
+    resources :videos, only: [:new, :create]
+  end
+
   ### Queue ###
   get '/my_queue', to: 'queue_items#index'
   patch '/update_queue', to: 'queue_items#update_queue'
@@ -31,16 +35,20 @@ Myflix::Application.routes.draw do
   get 'register/:token', to: 'users#new_with_invitation_token', as: 'register_with_token'
   resources :users, only: [:create, :show]
 
+  ### Followers/Leaders ###
   get '/people', to: 'relationships#index'
   resources :relationships, only: [:destroy, :create]
 
+  ### Forgot Password Workflow ###
   get 'forgot_password', to: 'forgot_passwords#new'
   get 'forgot_password_confirmation', to: 'forgot_passwords#confirm'
   resources :forgot_passwords, only: [:create]
 
+  ### Password Reset Workflow ###
   resources :password_resets, only: [:show, :create]
   get 'expired_token', to: 'pages#expired_token'
 
+  ### Invitations Workflow ###
   resources :invitations, only: [:new, :create]
 
 end
