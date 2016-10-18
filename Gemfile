@@ -10,6 +10,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'bootstrap_form'
 gem 'bcrypt'
+gem 'sidekiq' # multithreaded background workers
 
 group :development do
   gem 'thin'

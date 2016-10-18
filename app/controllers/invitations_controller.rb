@@ -9,7 +9,7 @@ class InvitationsController < ApplicationController
     @invitation = Invitation.new(invitation_params.merge!(inviter_id: current_user.id))
     if @invitation.save
       flash[:notice] = "Your invitation has been sent"
-      AppMailer.send_invitation_email(@invitation).deliver
+      AppMailer.delay.send_invitation_email(@invitation)
       redirect_to new_invitation_path
     else 
       flash[:errors] = "Your invitation failed to send. Please review your information."
