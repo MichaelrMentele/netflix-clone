@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   private
 
   def handle_invitation
-    if params[:invitation][:token].present?
+    if params[:invitation] && params[:invitation][:token].present?
       invitation = Invitation.find_by(params[:invitation])
       @user.follow(invitation.inviter)
       invitation.inviter.follow(@user)
