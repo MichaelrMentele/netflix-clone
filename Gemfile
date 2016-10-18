@@ -37,8 +37,8 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
-  gem 'pg'
-  gem 'sentry-raven'
+  gem 'puma' # Concurrent server
+  gem 'pg' # Postgres
+  gem 'sentry-raven' # Error aggregator
 end
 
