@@ -39,5 +39,6 @@ group :production do
   gem 'rails_12factor'
   gem 'puma'
   gem 'pg'
+  gem 'sentry-raven'
 end
 
