@@ -1,0 +1,16 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - heroku maintenance:on --app michaels-flix
+      - heroku pg:backups capture --app michaels-flix
+      - git push git@heroku.com:michaels-flix.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app michaels-flix
+      - heroku maintenance:off --app michaels-flix
+  staging:
+    branch: staging
+    commands:
+      - heroku maintenance:on --app staging-michaels-flix
+      - git push git@heroku.com:staging-michaels-flix.git $CIRCLE_SHA1:refs/heads/master
+      - heroku run rake db:migrate --app staging-michaels-flix
+      - heroku maintenance:off --app staging-michaels-flix
