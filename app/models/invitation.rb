@@ -1,5 +1,3 @@
-require_relative 'concerns/tokenable'
-
 class Invitation < ActiveRecord::Base
   include Tokenable
 

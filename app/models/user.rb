@@ -1,5 +1,3 @@
-require_relative 'concerns/tokenable'
-
 class User < ActiveRecord::Base
   include Tokenable
 

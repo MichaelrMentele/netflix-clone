@@ -34,3 +34,4 @@ feature "User invites friend" do
 end
 
 ActionMailer::Base.deliveries.clear
+
