@@ -11,6 +11,6 @@
           = hidden_field :invitation, :token
         %fieldset.actions.control-group.col-sm-offset-2
           .controls
-            %input(type="submit" value="Sign Up" class="btn btn-default")
-            
+            %script(src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="#{ENV['STRIPE_PUBLISHABLE_KEY']}" data-amount="999" data-name="MyFlix Signup Charge" data-description="Purchase Subscription" data-locale="auto")
+                
 

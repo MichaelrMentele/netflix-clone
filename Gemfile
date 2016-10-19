@@ -13,6 +13,8 @@ gem 'bcrypt'
 gem 'sidekiq' # multithreaded background workers
 gem 'carrierwave' # uploading
 gem 'mini_magick' # image processing
+gem 'stripe' # payment processing
+gem 'figaro' # sensitive info management
 
 group :development do
   gem 'thin'
