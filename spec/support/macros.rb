@@ -14,8 +14,11 @@ def current_user
   User.find(session[:user_id])
 end
 
-def sign_in(user=nil)
-  user = user || Fabricate(:user)
+def sign_in(user=nil, admin: false)
+  admin ? user_type = :admin : user_type = :user
+
+  user = user || Fabricate(user_type)
+
   visit login_path
   fill_in "Email Address", with: user.email
   fill_in "Password", with: user.password

@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'bootstrap_form'
 gem 'bcrypt'
 gem 'sidekiq' # multithreaded background workers
+gem 'carrierwave' # uploading
+gem 'mini_magick' # image processing
 
 group :development do
   gem 'thin'
@@ -37,6 +39,7 @@ group :test do
 end
 
 group :production do
+  gem 'carrierwave-aws' # file storage
   gem 'rails_12factor'
   gem 'puma' # Concurrent server
   gem 'pg' # Postgres
