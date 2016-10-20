@@ -8,6 +8,7 @@ require 'sidekiq/testing'
 require 'sidekiq/testing/inline'
 require 'vcr'
 
+Capybara.default_max_wait_time = 4
 Capybara.server_port = 52662
 
 VCR.configure do |c|
