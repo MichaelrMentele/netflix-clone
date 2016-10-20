@@ -4,17 +4,18 @@ ruby '2.1.2'
 gem 'bootstrap-sass', '3.1.1.1'
 gem 'coffee-rails'
 gem 'rails', '4.1.1'
+gem 'jquery-rails'
+gem 'bootstrap_form'
+gem 'bcrypt'      # password hashing
+gem 'sidekiq'     # multithreaded background workers
+gem 'carrierwave' # uploading
+gem 'mini_magick' # image processing
+gem 'stripe'      # payment processing
+gem 'figaro'      # sensitive info management
+
 gem 'haml-rails'
 gem 'sass-rails'
 gem 'uglifier'
-gem 'jquery-rails'
-gem 'bootstrap_form'
-gem 'bcrypt'
-gem 'sidekiq' # multithreaded background workers
-gem 'carrierwave' # uploading
-gem 'mini_magick' # image processing
-gem 'stripe' # payment processing
-gem 'figaro' # sensitive info management
 
 group :development do
   gem 'thin'
@@ -34,10 +35,12 @@ end
 group :test do
   gem 'database_cleaner', '1.4.1'
   gem 'shoulda-matchers', '2.7.0'
-  gem 'vcr', '2.9.3'
+  gem 'vcr', '2.9.3' # record api requests reponses
+  gem 'webmock'
   gem 'capybara'
   gem 'capybara-email'
   gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 group :production do

@@ -27,7 +27,7 @@ end
 
 def sign_out
   click_link "Welcome"
-  click_link "Sign Out"
+  click_link("Sign Out")
 end
 
 def view(video)
