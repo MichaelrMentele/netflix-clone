@@ -13,13 +13,4 @@ class Video < ActiveRecord::Base
     Video.where("title LIKE ?", "%#{search_term}%").order("created_at DESC")
   end
   
-  def average_rating
-    reviews.size > 0 ? rating_sum / reviews.size : 0
-  end
-
-  private
-  
-  def rating_sum
-    reviews.inject(0) { |sum, review| sum + review.rating }
-  end
 end
