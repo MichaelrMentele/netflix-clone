@@ -3,9 +3,9 @@ require 'spec_helper'
 describe UserRegistration do 
   describe "#register" do 
     context "valid personal info and valid card" do 
-      let(:charge) { double(:charge, successful?: true)}
+      let(:customer) { double(:customer, successful?: true)}
       before do 
-        StripeWrapper::Charge.should_receive(:create) { charge }
+        StripeWrapper::Customer.should_receive(:create) { customer }
       end
 
       context 'and no token' do 
@@ -47,12 +47,12 @@ describe UserRegistration do
     end
 
     context "valid personal info and declined" do 
-      let (:charge) { double(:charge, successful?: false, error_message: "Your card was declined.") }
+      let (:customer) { double(:customer, successful?: false, error_message: "Your card was declined.") }
       before do 
         
       end
       it "does not create a new user record" do 
-        StripeWrapper::Charge.should_receive(:create).and_return(charge)
+        StripeWrapper::Customer.should_receive(:create).and_return(customer)
         UserRegistration.new(Fabricate.build(:user)).register('12345', nil) 
         expect(User.count).to eq(0)
       end
@@ -66,7 +66,7 @@ describe UserRegistration do
       end
 
       it "does not charge the card" do 
-        StripeWrapper::Charge.should_receive(:create).never
+        StripeWrapper::Customer.should_receive(:create).never
         UserRegistration.new(User.new(email: "m")).register('12345', nil) 
       end
 
