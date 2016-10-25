@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   include Tokenable
 
+  has_many :payments
   has_many :reviews, -> {order "created_at DESC"}
   has_many :queue_items, -> { order "position ASC"}
   has_many :leading_relationships, class_name: "Relationship", foreign_key: :leader_id
@@ -27,5 +28,9 @@ class User < ActiveRecord::Base
 
   def follows?(leader)
     Relationship.where(leader_id: leader.id, follower_id: id).exists?
+  end
+
+  def deactivate!
+    update_column(:active, false)
   end
 end

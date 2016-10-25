@@ -12,12 +12,11 @@ Capybara.default_max_wait_time = 4
 Capybara.server_port = 52662
 
 VCR.configure do |c|
-  c.default_cassette_options = { :record => :new_episodes, :erb => true }
-
-  # not important for this example, but must be set to something
+  c.default_cassette_options = { :record => :new_episodes}
+  c.allow_http_connections_when_no_cassette = true
   c.hook_into :webmock
   c.cassette_library_dir = 'cassettes'
-  c.ignore_localhost = true
+  c.configure_rspec_metadata!
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

@@ -35,6 +35,7 @@ feature "User invites friend" do
     click_link "People"
     expect(page).to have_content alice.username
     sign_out
+    sleep 1
 
     sign_in(alice)
     click_link "People"

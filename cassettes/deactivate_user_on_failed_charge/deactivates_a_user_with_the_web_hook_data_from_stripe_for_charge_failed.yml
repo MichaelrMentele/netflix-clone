@@ -1,0 +1,144 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.stripe.com/v1/events/evt_198dBrFu8RB24okGcrq7hIfG
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Stripe/v1 RubyBindings/1.55.0
+      Authorization:
+      - Bearer sk_test_Hj66ggJNipYBdJNvdJK83fEU
+      Content-Type:
+      - application/x-www-form-urlencoded
+      X-Stripe-Client-User-Agent:
+      - '{"bindings_version":"1.55.0","lang":"ruby","lang_version":"2.1.2 p95 (2014-05-08)","platform":"x86_64-linux","engine":"ruby","publisher":"stripe","uname":"Linux
+        version 4.4.0-45-generic (buildd@lgw01-34) (gcc version 5.4.0 20160609 (Ubuntu
+        5.4.0-6ubuntu1~16.04.2) ) #66-Ubuntu SMP Wed Oct 19 14:12:37 UTC 2016","hostname":"michaelmentele-Satellite-C75D-B"}'
+      Host:
+      - api.stripe.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 25 Oct 2016 23:14:08 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2301'
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, HEAD, OPTIONS, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '300'
+      Cache-Control:
+      - no-cache, no-store
+      Request-Id:
+      - req_9RXBWUBJsjcxad
+      Stripe-Version:
+      - '2016-07-06'
+      Strict-Transport-Security:
+      - max-age=31556926; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "id": "evt_198dBrFu8RB24okGcrq7hIfG",
+          "object": "event",
+          "api_version": "2016-07-06",
+          "created": 1477433679,
+          "data": {
+            "object": {
+              "id": "ch_198dBrFu8RB24okGapzswHIx",
+              "object": "charge",
+              "amount": 122100,
+              "amount_refunded": 0,
+              "application_fee": null,
+              "balance_transaction": null,
+              "captured": false,
+              "created": 1477433679,
+              "currency": "usd",
+              "customer": "cus_9RUPz1fOBqCWUD",
+              "description": "",
+              "destination": null,
+              "dispute": null,
+              "failure_code": "card_declined",
+              "failure_message": "Your card was declined.",
+              "fraud_details": {},
+              "invoice": null,
+              "livemode": false,
+              "metadata": {},
+              "order": null,
+              "outcome": {
+                "network_status": "declined_by_network",
+                "reason": "generic_decline",
+                "risk_level": "normal",
+                "seller_message": "The bank did not return any further details with this decline.",
+                "type": "issuer_declined"
+              },
+              "paid": false,
+              "receipt_email": null,
+              "receipt_number": null,
+              "refunded": false,
+              "refunds": {
+                "object": "list",
+                "data": [],
+                "has_more": false,
+                "total_count": 0,
+                "url": "/v1/charges/ch_198dBrFu8RB24okGapzswHIx/refunds"
+              },
+              "review": null,
+              "shipping": null,
+              "source": {
+                "id": "card_198chSFu8RB24okGApqjpu9I",
+                "object": "card",
+                "address_city": null,
+                "address_country": null,
+                "address_line1": null,
+                "address_line1_check": null,
+                "address_line2": null,
+                "address_state": null,
+                "address_zip": null,
+                "address_zip_check": null,
+                "brand": "Visa",
+                "country": "US",
+                "customer": "cus_9RUPz1fOBqCWUD",
+                "cvc_check": null,
+                "dynamic_last4": null,
+                "exp_month": 10,
+                "exp_year": 2017,
+                "fingerprint": "TU9fotBzafXUpmHG",
+                "funding": "credit",
+                "last4": "0341",
+                "metadata": {},
+                "name": null,
+                "tokenization_method": null
+              },
+              "source_transfer": null,
+              "statement_descriptor": null,
+              "status": "failed"
+            }
+          },
+          "livemode": false,
+          "pending_webhooks": 0,
+          "request": "req_9RWE1AClOow2kL",
+          "type": "charge.failed"
+        }
+    http_version: 
+  recorded_at: Tue, 25 Oct 2016 23:14:08 GMT
+recorded_with: VCR 2.9.3

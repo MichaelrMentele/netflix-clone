@@ -9,6 +9,7 @@ feature 'user registers', { js: true, vcr: true } do
     fill_in_valid_user
     fill_in_valid_card
     click_button "Sign Up"
+    sleep 1
     expect(page).to have_content "Thank you for registering with MyFlix. Please sign in now."
   end
 
@@ -16,20 +17,23 @@ feature 'user registers', { js: true, vcr: true } do
     fill_in_valid_user
     fill_in_invalid_card
     click_button "Sign Up"
+    sleep 1
     expect(page).to have_content "The card number is not a valid credit card number."
   end
 
-  scenario 'and has valid user info but declined card' do 
+  scenario 'and has valid user info but declined card' do
     fill_in_valid_user
     fill_in_declined_card
     click_button "Sign Up"
+    sleep 1
     expect(page).to have_content "Your card was declined."
   end
 
-  scenario 'with invalid personal info and valid card' do 
+  scenario 'with invalid personal info and valid card' do
     fill_in_invalid_user
     fill_in_valid_card
     click_button "Sign Up"
+    sleep 1
     expect(page).to have_content "Invalid user information. Please check the errors below."
   end
 
@@ -37,6 +41,7 @@ feature 'user registers', { js: true, vcr: true } do
     fill_in_invalid_user
     fill_in_invalid_card    
     click_button "Sign Up"
+    sleep 1
     expect(page).to have_content "The card number is not a valid credit card number."
   end
 
@@ -44,6 +49,7 @@ feature 'user registers', { js: true, vcr: true } do
     fill_in_invalid_user
     fill_in_declined_card
     click_button "Sign Up"
+    sleep 1
     expect(page).to have_content "Invalid user information. Please check the errors below."
   end
 end

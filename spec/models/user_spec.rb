@@ -40,4 +40,12 @@ describe User do
       expect(alice.follows?(alice)).to eq(false)
     end
   end
+
+  describe "#deactivate!" do 
+    it "sets the active boolean to false" do 
+      alice = Fabricate(:user, active: true)
+      alice.deactivate!
+      expect(alice.reload).not_to be_active
+    end
+  end
 end

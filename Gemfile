@@ -1,18 +1,28 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'bootstrap-sass', '3.1.1.1'
-gem 'coffee-rails'
 gem 'rails', '4.1.1'
 gem 'jquery-rails'
 gem 'bootstrap_form'
+
 gem 'bcrypt'      # password hashing
 gem 'sidekiq'     # multithreaded background workers
+
 gem 'carrierwave' # uploading
 gem 'mini_magick' # image processing
+
 gem 'stripe'      # payment processing
+gem 'stripe_event' # webhooks
+
 gem 'figaro'      # sensitive info management
 
+# better search
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
+# assets pipeline
+gem 'bootstrap-sass', '3.1.1.1'
+gem 'coffee-rails'
 gem 'haml-rails'
 gem 'sass-rails'
 gem 'uglifier'
@@ -36,7 +46,7 @@ group :test do
   gem 'database_cleaner', '1.4.1'
   gem 'shoulda-matchers', '2.7.0'
   gem 'vcr', '2.9.3' # record api requests reponses
-  gem 'webmock'
+  gem 'webmock', '< 2.0.0'
   gem 'capybara'
   gem 'capybara-email'
   gem 'launchy'
