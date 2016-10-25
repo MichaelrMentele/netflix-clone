@@ -14,3 +14,11 @@ deployment:
       - git push git@heroku.com:staging-michaels-flix.git $CIRCLE_SHA1:refs/heads/master
       - heroku run rake db:migrate --app staging-michaels-flix
       - heroku maintenance:off --app staging-michaels-flix
+test:
+  pre:
+    - mozdownload --version latest --destination firefox.tar.bz2
+    - mozinstall firefox.tar.bz2
+    - wget -O geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v0.10.0/geckodriver-v0.10.0-linux64.tar.gz
+    - gunzip -c geckodriver.tar.gz | tar xopf -
+    - chmod +x geckodriver
+    - sudo mv geckodriver /home/ubuntu/bin
