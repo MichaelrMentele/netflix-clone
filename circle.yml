@@ -14,6 +14,10 @@ deployment:
       - git push git@heroku.com:staging-michaels-flix.git $CIRCLE_SHA1:refs/heads/master
       - heroku run rake db:migrate --app staging-michaels-flix
       - heroku maintenance:off --app staging-michaels-flix
+
+dependencies:
+  override:
+    - pip install tox mozdownload mozinstall
 test:
   pre:
     - mozdownload --version latest --destination firefox.tar.bz2
