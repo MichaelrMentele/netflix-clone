@@ -1,4 +1,7 @@
 class Video < ActiveRecord::Base
+  include Elasticsearch::Model
+  index_name ["myflix", Rails.env].join('_') # create separate indexes for each environment
+
   belongs_to :category
   has_many :reviews, -> { order 'created_at DESC'}
   has_many :queue_items

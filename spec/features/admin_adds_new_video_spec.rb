@@ -14,6 +14,7 @@ feature 'Admin adds new video' do
     attach_file "Small cover", "spec/support/uploads/monk.jpg"
     fill_in "Video URL", with: "http://www.example.com/my_vid.mp4"
     click_button "Add Video"
+    sleep 1
 
     sign_out
     sign_in
