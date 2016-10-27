@@ -1,0 +1,45 @@
+%section.advanced_search.container
+  = form_tag advanced_search_videos_path, method: :get, class: "form-horizontal" do
+    %header
+      %h1 Advanced Search
+    .form-group
+      .col-sm-6
+        = search_field_tag :query, params[:query], placeholder: "Search videos by title, description.", class: "form-control"
+    .form-group
+      .col-sm-6
+        = label_tag "search_reviews_enable", "Include Reviews"
+        = check_box_tag("search_reviews_enable", 'y', params[:search_reviews_enable] == 'y', class: "checkbox")
+    .form-group
+      .row.average_rating_label Average Rating
+      = label_tag :rating_from, "From:", class: "col-sm-1 control-label"
+      .col-sm-2
+        = select_tag  "rating_from", options_for_select((10..50).map { |num| num / 10.0 }, params[:rating_from]), prompt: "-" , class: "form-control"
+      = label_tag :rating_to, "To:", class: "col-sm-1 control-label"
+      .col-sm-2
+        = select_tag "rating_to", options_for_select((10..50).map { |num| num / 10.0 }, params[:rating_to]), prompt: "-" , class: "form-control"    
+    .form-group
+      .col-sm-6
+        = button_tag(type: "submit", class: "btn btn-primary") do
+          %span.glyphicon.glyphicon-search
+          Search
+  %hr
+  %h2.results_count Results: #{@videos.count} videos found
+  - @videos.each do |video|
+    %article.video.row
+      .video_data
+        %figure.col-sm-2
+          %img(src="#{video.small_cover}" alt="video cover")
+        .video_body.col-sm-10
+          %header
+            %h3
+              Video
+              %em.label.label-highlight= video.title
+          %p.video_description
+            = video.description
+          %hr
+          .details
+            %span.average_rating Average rating: #{video.average_rating}
+            %span.reviews_count #{video.reviews.count} reviews
+          - video.reviews.each do |review|
+            %footer.video_review
+              = review.description
