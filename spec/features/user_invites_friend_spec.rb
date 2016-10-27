@@ -17,6 +17,7 @@ feature "User invites friend" do
 
     open_email "John@doe.com"
     current_email.click_link "Accept this invitation"
+    sleep 1
 
     fill_in "Password", with: "password"
     fill_in "Full Name", with: "John Doe"

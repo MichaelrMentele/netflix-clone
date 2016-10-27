@@ -31,7 +31,6 @@ class Video < ActiveRecord::Base
 
     if query.present? && options[:reviews].present?
       search_definition[:query][:multi_match][:fields] << "reviews.description"
-      binding.pry
     end
 
     if options[:rating_from].present? || options[:rating_to].present?
@@ -62,7 +61,7 @@ class Video < ActiveRecord::Base
   end  
 
   def average_rating
-    reviews.size > 0 ? rating_sum / reviews.size.to_f : 0
+    reviews.size > 0 ? rating_sum / reviews.size.to_f : 0.0
   end
 
   private

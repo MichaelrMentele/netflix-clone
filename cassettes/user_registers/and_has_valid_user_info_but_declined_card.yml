@@ -5989,4 +5989,3031 @@ http_interactions:
         MjBcbsKpIDIwMTMgTXlGTGlYIn0=
     http_version: 
   recorded_at: Thu, 27 Oct 2016 00:17:23 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:52662/__identify__
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.1.2/2014-05-08)
+      Date:
+      - Thu, 27 Oct 2016 15:32:22 GMT
+      Content-Length:
+      - '8'
+      Connection:
+      - Keep-Alive
+    body:
+      encoding: UTF-8
+      string: '35424540'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:22 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session
+    body:
+      encoding: UTF-8
+      string: '{"desiredCapabilities":{"browserName":"firefox","browserVersion":null,"platformName":null,"platformVersion":"any","acceptSslCerts":false,"pageLoadStrategy":"normal","unexpectedAlertBehaviour":"ignore","moz:firefoxOptions":{}}}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '226'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:32 GMT
+      Content-Length:
+      - '565'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"sessionId":"3f9da770-2a57-4b6d-b3de-b5c8afe33252","value":{"XULappId":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","acceptSslCerts":false,"appBuildId":"20160920074044","browserName":"firefox","browserVersion":null,"command_id":1,"device":"desktop","pageLoadStrategy":"normal","platform":"LINUX","platformName":null,"platformVersion":"4.4.0-45-generic","processId":29423,"proxy":{},"raisesAccessibilityExceptions":false,"rotatable":false,"specificationLevel":0,"takesElementScreenshot":true,"takesScreenshot":true,"unexpectedAlertBehaviour":"ignore","version":"49.0"}}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:32 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/url
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://127.0.0.1:52662/register"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '41'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''Email Address''
+        or ./@name = ''Email Address'') or ./@placeholder = ''Email Address'') or
+        ./@id = //label[normalize-space(string(.)) = ''Email Address'']/@for)] | .//label[normalize-space(string(.))
+        = ''Email Address'']//.//*[self::input | self::textarea][not(./@type = ''submit''
+        or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox'' or
+        ./@type = ''hidden'' or ./@type = ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '587'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"719474ed-d64d-445f-b619-43f03ac89cef"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/719474ed-d64d-445f-b619-43f03ac89cef/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/719474ed-d64d-445f-b619-43f03ac89cef/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/719474ed-d64d-445f-b619-43f03ac89cef/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Content-Length:
+      - '17'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"719474ed-d64d-445f-b619-43f03ac89cef"},"type"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8543'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"value":"email"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"719474ed-d64d-445f-b619-43f03ac89cef"},"readonly"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8547'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '14'
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"element-6066-11e4-a52e-4f735466cecf":"719474ed-d64d-445f-b619-43f03ac89cef"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:36 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:36 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/719474ed-d64d-445f-b619-43f03ac89cef/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["K","e","v","i","n","@","w","a","n","g",".","c","o","m"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '67'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '2'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''Password'' or
+        ./@name = ''Password'') or ./@placeholder = ''Password'') or ./@id = //label[normalize-space(string(.))
+        = ''Password'']/@for)] | .//label[normalize-space(string(.)) = ''Password'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '562'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"3dc21334-1b1d-4eb2-9517-3ed93e500255"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3dc21334-1b1d-4eb2-9517-3ed93e500255/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3dc21334-1b1d-4eb2-9517-3ed93e500255/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '14'
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3dc21334-1b1d-4eb2-9517-3ed93e500255/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3dc21334-1b1d-4eb2-9517-3ed93e500255"},"type"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8543'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '20'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":"password"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"3dc21334-1b1d-4eb2-9517-3ed93e500255"},"readonly"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8547'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"element-6066-11e4-a52e-4f735466cecf":"3dc21334-1b1d-4eb2-9517-3ed93e500255"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3dc21334-1b1d-4eb2-9517-3ed93e500255/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["p","a","s","s","w","o","r","d"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '43'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''Full Name'' or
+        ./@name = ''Full Name'') or ./@placeholder = ''Full Name'') or ./@id = //label[normalize-space(string(.))
+        = ''Full Name'']/@for)] | .//label[normalize-space(string(.)) = ''Full Name'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '567'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"d7e1a3b6-4952-407e-b88d-abf84e621263"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/d7e1a3b6-4952-407e-b88d-abf84e621263/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/d7e1a3b6-4952-407e-b88d-abf84e621263/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/d7e1a3b6-4952-407e-b88d-abf84e621263/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '17'
+    body:
+      encoding: UTF-8
+      string: '{"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d7e1a3b6-4952-407e-b88d-abf84e621263"},"type"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8543'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '16'
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":"text"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"d7e1a3b6-4952-407e-b88d-abf84e621263"},"readonly"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8547'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"element-6066-11e4-a52e-4f735466cecf":"d7e1a3b6-4952-407e-b88d-abf84e621263"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/d7e1a3b6-4952-407e-b88d-abf84e621263/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["J","o","h","n"," ","D","o","e"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '43'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '2'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''Credit Card Number''
+        or ./@name = ''Credit Card Number'') or ./@placeholder = ''Credit Card Number'')
+        or ./@id = //label[normalize-space(string(.)) = ''Credit Card Number'']/@for)]
+        | .//label[normalize-space(string(.)) = ''Credit Card Number'']//.//*[self::input
+        | self::textarea][not(./@type = ''submit'' or ./@type = ''image'' or ./@type
+        = ''radio'' or ./@type = ''checkbox'' or ./@type = ''hidden'' or ./@type =
+        ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '612'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:37 GMT
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"cb06ab24-9d44-473a-b0c6-8784570c7ea2"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:37 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/cb06ab24-9d44-473a-b0c6-8784570c7ea2/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '14'
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/cb06ab24-9d44-473a-b0c6-8784570c7ea2/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/cb06ab24-9d44-473a-b0c6-8784570c7ea2/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '17'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"cb06ab24-9d44-473a-b0c6-8784570c7ea2"},"type"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8543'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '16'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":"text"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"cb06ab24-9d44-473a-b0c6-8784570c7ea2"},"readonly"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8547'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"element-6066-11e4-a52e-4f735466cecf":"cb06ab24-9d44-473a-b0c6-8784570c7ea2"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '14'
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/cb06ab24-9d44-473a-b0c6-8784570c7ea2/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["4","0","0","0","0","0","0","0","0","0","0","0","0","0","0","2"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '75'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//*[self::input | self::textarea][not(./@type
+        = ''submit'' or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox''
+        or ./@type = ''hidden'' or ./@type = ''file'')][(((./@id = ''Security Code''
+        or ./@name = ''Security Code'') or ./@placeholder = ''Security Code'') or
+        ./@id = //label[normalize-space(string(.)) = ''Security Code'']/@for)] | .//label[normalize-space(string(.))
+        = ''Security Code'']//.//*[self::input | self::textarea][not(./@type = ''submit''
+        or ./@type = ''image'' or ./@type = ''radio'' or ./@type = ''checkbox'' or
+        ./@type = ''hidden'' or ./@type = ''file'')]"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '587'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"2c4ea57e-6a0b-443f-ba06-531c84b37797"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/2c4ea57e-6a0b-443f-ba06-531c84b37797/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/2c4ea57e-6a0b-443f-ba06-531c84b37797/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/2c4ea57e-6a0b-443f-ba06-531c84b37797/name
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '17'
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":"input"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2c4ea57e-6a0b-443f-ba06-531c84b37797"},"type"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8543'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '16'
+    body:
+      encoding: UTF-8
+      string: '{"value":"text"}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"return (function(){return function(){var aa=\"function\"==typeof
+        Object.defineProperties?Object.defineProperty:function(a,c,b){if(b.get||b.set)throw
+        new TypeError(\"ES3 does not support getters and setters.\");a!=Array.prototype&&a!=Object.prototype&&(a[c]=b.value)},ba=\"undefined\"!=typeof
+        window&&window===this?this:\"undefined\"!=typeof global?global:this;\nfunction
+        e(a,c){if(c){for(var b=ba,d=a.split(\".\"),f=0;f<d.length-1;f++){var h=d[f];h
+        in b||(b[h]={});b=b[h]}d=d[d.length-1];f=b[d];h=c(f);h!=f&&null!=h&&aa(b,d,{configurable:!0,writable:!0,value:h})}}\ne(\"String.prototype.repeat\",function(a){return
+        a?a:function(a){var b;if(null==this)throw new TypeError(\"The ''this'' value
+        for String.prototype.repeat must not be null or undefined\");b=this+\"\";if(0>a||1342177279<a)throw
+        new RangeError(\"Invalid count value\");a|=0;for(var d=\"\";a;)if(a&1&&(d+=b),a>>>=1)b+=b;return
+        d}});e(\"Math.sign\",function(a){return a?a:function(a){a=Number(a);return!a||isNaN(a)?a:0<a?1:-1}});var
+        g=this;function l(a){return\"string\"==typeof a};function m(a,c){this.a=n[a]||p;this.message=c||\"\";var
+        b=this.a.replace(/((?:^|\\s+)[a-z])/g,function(a){return a.toUpperCase().replace(/^[\\s\\xa0]+/g,\"\")}),d=b.length-5;if(0>d||b.indexOf(\"Error\",d)!=d)b+=\"Error\";this.name=b;b=Error(this.message);b.name=this.name;this.stack=b.stack||\"\"}\n(function(){var
+        a=Error;function c(){}c.prototype=a.prototype;m.b=a.prototype;m.prototype=new
+        c;m.prototype.constructor=m;m.a=function(b,c,f){for(var h=Array(arguments.length-2),k=2;k<arguments.length;k++)h[k-2]=arguments[k];return
+        a.prototype[c].apply(b,h)}})();var p=\"unknown error\",n={15:\"element not
+        selectable\",11:\"element not visible\"};n[31]=p;n[30]=p;n[24]=\"invalid cookie
+        domain\";n[29]=\"invalid element coordinates\";n[12]=\"invalid element state\";n[32]=\"invalid
+        selector\";n[51]=\"invalid selector\";\nn[52]=\"invalid selector\";n[17]=\"javascript
+        error\";n[405]=\"unsupported operation\";n[34]=\"move target out of bounds\";n[27]=\"no
+        such alert\";n[7]=\"no such element\";n[8]=\"no such frame\";n[23]=\"no such
+        window\";n[28]=\"script timeout\";n[33]=\"session not created\";n[10]=\"stale
+        element reference\";n[21]=\"timeout\";n[25]=\"unable to set cookie\";n[26]=\"unexpected
+        alert open\";n[13]=p;n[9]=\"unknown command\";m.prototype.toString=function(){return
+        this.name+\": \"+this.message};var q=String.prototype.trim?function(a){return
+        a.trim()}:function(a){return a.replace(/^[\\s\\xa0]+|[\\s\\xa0]+$/g,\"\")};\nfunction
+        r(a,c){for(var b=0,d=q(String(a)).split(\".\"),f=q(String(c)).split(\".\"),h=Math.max(d.length,f.length),k=0;!b&&k<h;k++){var
+        S=d[k]||\"\",ja=f[k]||\"\",ka=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\"),la=RegExp(\"(\\\\d*)(\\\\D*)\",\"g\");do{var
+        t=ka.exec(S)||[\"\",\"\",\"\"],u=la.exec(ja)||[\"\",\"\",\"\"];if(0==t[0].length&&0==u[0].length)break;b=v(0==t[1].length?0:parseInt(t[1],10),0==u[1].length?0:parseInt(u[1],10))||v(0==t[2].length,0==u[2].length)||v(t[2],u[2])}while(!b)}return
+        b}function v(a,c){return a<c?-1:a>c?1:0};var w;a:{var x=g.navigator;if(x){var
+        y=x.userAgent;if(y){w=y;break a}}w=\"\"}function z(a){return-1!=w.indexOf(a)};function
+        ca(a,c){for(var b=a.length,d=l(a)?a.split(\"\"):a,f=0;f<b;f++)f in d&&c.call(void
+        0,d[f],f,a)};function A(){return z(\"iPhone\")&&!z(\"iPod\")&&!z(\"iPad\")};function
+        B(){return z(\"Opera\")||z(\"OPR\")}function C(){return(z(\"Chrome\")||z(\"CriOS\"))&&!B()&&!z(\"Edge\")};var
+        D=B(),E=z(\"Trident\")||z(\"MSIE\"),F=z(\"Edge\"),G=z(\"Gecko\")&&!(-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\"))&&!(z(\"Trident\")||z(\"MSIE\"))&&!z(\"Edge\"),da=-1!=w.toLowerCase().indexOf(\"webkit\")&&!z(\"Edge\");function
+        ea(){var a=w;if(G)return/rv\\:([^\\);]+)(\\)|;)/.exec(a);if(F)return/Edge\\/([\\d\\.]+)/.exec(a);if(E)return/\\b(?:MSIE|rv)[:
+        ]([^\\);]+)(\\)|;)/.exec(a);if(da)return/WebKit\\/(\\S+)/.exec(a)}function
+        H(){var a=g.document;return a?a.documentMode:void 0}\nvar I=function(){if(D&&g.opera){var
+        a;var c=g.opera.version;try{a=c()}catch(b){a=c}return a}a=\"\";(c=ea())&&(a=c?c[1]:\"\");return
+        E&&(c=H(),null!=c&&c>parseFloat(a))?String(c):a}(),J={},K=g.document,L=K&&E?H()||(\"CSS1Compat\"==K.compatMode?parseInt(I,10):5):void
+        0;!G&&!E||E&&9<=Number(L)||G&&(J[\"1.9.1\"]||(J[\"1.9.1\"]=0<=r(I,\"1.9.1\")));E&&(J[\"9\"]||(J[\"9\"]=0<=r(I,\"9\")));var
+        fa=z(\"Firefox\"),ga=A()||z(\"iPod\"),ha=z(\"iPad\"),M=z(\"Android\")&&!(C()||z(\"Firefox\")||B()||z(\"Silk\")),ia=C(),N=z(\"Safari\")&&!(C()||z(\"Coast\")||B()||z(\"Edge\")||z(\"Silk\")||z(\"Android\"))&&!(A()||z(\"iPad\")||z(\"iPod\"));var
+        ma={SCRIPT:1,STYLE:1,HEAD:1,IFRAME:1,OBJECT:1},na={IMG:\" \",BR:\"\\n\"};function
+        oa(a,c,b){if(!(a.nodeName in ma))if(3==a.nodeType)b?c.push(String(a.nodeValue).replace(/(\\r\\n|\\r|\\n)/g,\"\")):c.push(a.nodeValue);else
+        if(a.nodeName in na)c.push(na[a.nodeName]);else for(a=a.firstChild;a;)oa(a,c,b),a=a.nextSibling};function
+        O(a){return(a=a.exec(w))?a[1]:\"\"}var pa=function(){if(fa)return O(/Firefox\\/([0-9.]+)/);if(E||F||D)return
+        I;if(ia)return O(/Chrome\\/([0-9.]+)/);if(N&&!(A()||z(\"iPad\")||z(\"iPod\")))return
+        O(/Version\\/([0-9.]+)/);if(ga||ha){var a=/Version\\/(\\S+).*Mobile\\/(\\S+)/.exec(w);if(a)return
+        a[1]+\".\"+a[2]}else if(M)return(a=O(/Android\\s+([0-9.]+)/))?a:O(/Version\\/([0-9.]+)/);return\"\"}();var
+        qa;function P(a){ra?qa(a):M?r(sa,a):r(pa,a)}var ra=function(){if(!G)return!1;var
+        a=g.Components;if(!a)return!1;try{if(!a.classes)return!1}catch(f){return!1}var
+        c=a.classes,a=a.interfaces,b=c[\"@mozilla.org/xpcom/version-comparator;1\"].getService(a.nsIVersionComparator),d=c[\"@mozilla.org/xre/app-info;1\"].getService(a.nsIXULAppInfo).version;qa=function(a){b.compare(d,\"\"+a)};return!0}(),Q;if(M){var
+        ta=/Android\\s+([0-9\\.]+)/.exec(w);Q=ta?ta[1]:\"0\"}else Q=\"0\";\nvar sa=Q,ua=E&&!(8<=Number(L)),va=E&&!(9<=Number(L));M&&P(2.3);M&&P(4);N&&P(6);function
+        R(a,c){c=c.toLowerCase();if(\"style\"==c)return wa(a.style.cssText);if(ua&&\"value\"==c&&T(a,\"INPUT\"))return
+        a.value;if(va&&!0===a[c])return String(a.getAttribute(c));var b=a.getAttributeNode(c);return
+        b&&b.specified?b.value:null}var xa=/[;]+(?=(?:(?:[^\"]*\"){2})*[^\"]*$)(?=(?:(?:[^'']*''){2})*[^'']*$)(?=(?:[^()]*\\([^()]*\\))*[^()]*$)/;\nfunction
+        wa(a){var c=[];ca(a.split(xa),function(a){var d=a.indexOf(\":\");0<d&&(a=[a.slice(0,d),a.slice(d+1)],2==a.length&&c.push(a[0].toLowerCase(),\":\",a[1],\";\"))});c=c.join(\"\");return
+        c=\";\"==c.charAt(c.length-1)?c:c+\";\"}function U(a,c){var b;ua&&\"value\"==c&&T(a,\"OPTION\")&&null===R(a,\"value\")?(b=[],oa(a,b,!1),b=b.join(\"\")):b=a[c];return
+        b}function T(a,c){return!!a&&1==a.nodeType&&(!c||a.tagName.toUpperCase()==c)}\nfunction
+        ya(a){return T(a,\"OPTION\")?!0:T(a,\"INPUT\")?(a=a.type.toLowerCase(),\"checkbox\"==a||\"radio\"==a):!1};var
+        za={\"class\":\"className\",readonly:\"readOnly\"},V=\"async autofocus autoplay
+        checked compact complete controls declare defaultchecked defaultselected defer
+        disabled draggable ended formnovalidate hidden indeterminate iscontenteditable
+        ismap itemscope loop multiple muted nohref noresize noshade novalidate nowrap
+        open paused pubdate readonly required reversed scoped seamless seeking selected
+        spellcheck truespeed willvalidate\".split(\" \");function Aa(a,c){var b=null,d=c.toLowerCase();if(\"style\"==d)return(b=a.style)&&!l(b)&&(b=b.cssText),b;if((\"selected\"==d||\"checked\"==d)&&ya(a)){if(!ya(a))throw
+        new m(15,\"Element is not selectable\");var b=\"selected\",f=a.type&&a.type.toLowerCase();if(\"checkbox\"==f||\"radio\"==f)b=\"checked\";return
+        U(a,b)?\"true\":null}var h=T(a,\"A\");if(T(a,\"IMG\")&&\"src\"==d||h&&\"href\"==d)return(b=R(a,d))&&(b=U(a,d)),b;if(\"spellcheck\"==d){b=R(a,d);if(null!==b){if(\"false\"==b.toLowerCase())return\"false\";if(\"true\"==b.toLowerCase())return\"true\"}return
+        U(a,\nd)+\"\"}h=za[c]||c;a:if(l(V))d=l(d)&&1==d.length?V.indexOf(d,0):-1;else{for(var
+        k=0;k<V.length;k++)if(k in V&&V[k]===d){d=k;break a}d=-1}if(0<=d)return(b=null!==R(a,c)||U(a,h))?\"true\":null;try{f=U(a,h)}catch(S){}(d=null==f)||(d=typeof
+        f,d=\"object\"==d&&null!=f||\"function\"==d);d?b=R(a,c):b=f;return null!=b?b.toString():null}var
+        W=[\"_\"],X=g;W[0]in X||!X.execScript||X.execScript(\"var \"+W[0]);for(var
+        Y;W.length&&(Y=W.shift());){var Z;if(Z=!W.length)Z=void 0!==Aa;Z?X[Y]=Aa:X[Y]?X=X[Y]:X=X[Y]={}};;
+        return this._.apply(null,arguments);}.apply({navigator:typeof window!=''undefined''?window.navigator:null,document:typeof
+        window!=''undefined''?window.document:null}, arguments);}\n).apply(null, arguments)","args":[{"element-6066-11e4-a52e-4f735466cecf":"2c4ea57e-6a0b-443f-ba06-531c84b37797"},"readonly"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '8547'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/execute/sync
+    body:
+      encoding: UTF-8
+      string: '{"script":"arguments[0].value = ''''","args":[{"element-6066-11e4-a52e-4f735466cecf":"2c4ea57e-6a0b-443f-ba06-531c84b37797"}]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '124'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":null}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/2c4ea57e-6a0b-443f-ba06-531c84b37797/value
+    body:
+      encoding: UTF-8
+      string: '{"value":["1","2","3"]}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '23'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//select[(((./@id = ''date_month'' or ./@name
+        = ''date_month'') or ./@placeholder = ''date_month'') or ./@id = //label[normalize-space(string(.))
+        = ''date_month'']/@for)] | .//label[normalize-space(string(.)) = ''date_month'']//.//select"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '256'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"71049434-0c28-4a08-8994-283b8a6bfc42"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/71049434-0c28-4a08-8994-283b8a6bfc42/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/71049434-0c28-4a08-8994-283b8a6bfc42/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/71049434-0c28-4a08-8994-283b8a6bfc42/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//option[normalize-space(string(.)) = ''10
+        - October'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '82'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"bea28783-be7e-4f7f-8135-76f8d5bc97bd"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/bea28783-be7e-4f7f-8135-76f8d5bc97bd/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/bea28783-be7e-4f7f-8135-76f8d5bc97bd/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '14'
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/bea28783-be7e-4f7f-8135-76f8d5bc97bd/selected
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:38 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:38 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//select[(((./@id = ''date_year'' or ./@name
+        = ''date_year'') or ./@placeholder = ''date_year'') or ./@id = //label[normalize-space(string(.))
+        = ''date_year'']/@for)] | .//label[normalize-space(string(.)) = ''date_year'']//.//select"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '251'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"8c85b88b-7960-4294-8c09-a9be190c72e3"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/8c85b88b-7960-4294-8c09-a9be190c72e3/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/8c85b88b-7960-4294-8c09-a9be190c72e3/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/8c85b88b-7960-4294-8c09-a9be190c72e3/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//option[normalize-space(string(.)) = ''2019'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '74'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"3d9e7d6c-78b7-49ae-bca6-c4ce033ffd05"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3d9e7d6c-78b7-49ae-bca6-c4ce033ffd05/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3d9e7d6c-78b7-49ae-bca6-c4ce033ffd05/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3d9e7d6c-78b7-49ae-bca6-c4ce033ffd05/selected
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Length:
+      - '15'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":false}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3d9e7d6c-78b7-49ae-bca6-c4ce033ffd05/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/3d9e7d6c-78b7-49ae-bca6-c4ce033ffd05/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":".//input[./@type = ''submit'' or ./@type
+        = ''reset'' or ./@type = ''image'' or ./@type = ''button''][((./@id = ''Sign
+        Up'' or ./@value = ''Sign Up'') or ./@title = ''Sign Up'')] | .//input[./@type
+        = ''image''][./@alt = ''Sign Up''] | .//button[((((./@id = ''Sign Up'' or
+        ./@value = ''Sign Up'') or ./@title = ''Sign Up'') or normalize-space(string(.))
+        = ''Sign Up'') or .//img[./@alt = ''Sign Up''])] | .//input[./@type = ''image''][./@alt
+        = ''Sign Up'']"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '450'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"81484249-4be4-4131-a488-d682883768b5"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/81484249-4be4-4131-a488-d682883768b5/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/81484249-4be4-4131-a488-d682883768b5/enabled
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Date:
+      - Thu, 27 Oct 2016 15:32:39 GMT
+      Content-Length:
+      - '14'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:39 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/81484249-4be4-4131-a488-d682883768b5/click
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:40 GMT
+      Content-Length:
+      - '2'
+    body:
+      encoding: UTF-8
+      string: "{}"
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:40 GMT
+- request:
+    method: post
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/elements
+    body:
+      encoding: UTF-8
+      string: '{"using":"xpath","value":"/html"}'
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '33'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+      Date:
+      - Thu, 27 Oct 2016 15:32:41 GMT
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"value":[{"element-6066-11e4-a52e-4f735466cecf":"4d4c6e93-2051-4437-9fec-fe3471ec5329"}]}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/4d4c6e93-2051-4437-9fec-fe3471ec5329/displayed
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 27 Oct 2016 15:32:41 GMT
+      Content-Type:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '14'
+    body:
+      encoding: UTF-8
+      string: '{"value":true}'
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:41 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:4444/session/3f9da770-2a57-4b6d-b3de-b5c8afe33252/element/4d4c6e93-2051-4437-9fec-fe3471ec5329/text
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Cache-Control:
+      - no-cache
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '335'
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 27 Oct 2016 15:32:41 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ2YWx1ZSI6Ik15RkxpWFxuw5dcbllvdXIgY2FyZCB3YXMgZGVjbGluZWQu
+        XG5SZWdpc3RlclxuRW1haWwgQWRkcmVzc1xuUGFzc3dvcmRcbkZ1bGwgTmFt
+        ZVxuQ3JlZGl0IENhcmQgTnVtYmVyXG5TZWN1cml0eSBDb2RlXG5FeHBpcmF0
+        aW9uXG4xIC0gSmFudWFyeVxuMiAtIEZlYnJ1YXJ5XG4zIC0gTWFyY2hcbjQg
+        LSBBcHJpbFxuNSAtIE1heVxuNiAtIEp1bmVcbjcgLSBKdWx5XG44IC0gQXVn
+        dXN0XG45IC0gU2VwdGVtYmVyXG4xMCAtIE9jdG9iZXJcbjExIC0gTm92ZW1i
+        ZXJcbjEyIC0gRGVjZW1iZXJcbjIwMTZcbjIwMTdcbjIwMThcbjIwMTlcbjIw
+        MjBcbsKpIDIwMTMgTXlGTGlYIn0=
+    http_version: 
+  recorded_at: Thu, 27 Oct 2016 15:32:41 GMT
 recorded_with: VCR 2.9.3
