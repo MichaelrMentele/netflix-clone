@@ -33,6 +33,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.before(:each, elasticsearch: true) do
+    Video.__elasticsearch__.create_index! force: true
+  end
+
   config.treat_symbols_as_metadata_keys_with_true_values = true
 
   # ## Mock Framework

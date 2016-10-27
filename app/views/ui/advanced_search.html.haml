@@ -1,10 +1,10 @@
 %section.advanced_search.container
-  %form.form-horizontal
+  = advanced_search_videos_path, class: "form-horizontal", method: :get do
     %header
       %h1 Advanced Search
     .form-group
       .col-sm-6
-        %input.form-control(type="search" placeholder="Search videos by title, description")
+        = search_field_tag :query, params[:query], placeholder="Search videos by title, description.", class: "form-control"
     .form-group
       .col-sm-6
         .checkbox

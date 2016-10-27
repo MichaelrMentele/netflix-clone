@@ -1,9 +1,16 @@
 class Video < ActiveRecord::Base
+<<<<<<< HEAD
+  include Elasticsearch::Model
+  index_name ["myflix", Rails.env].join('_') # create separate indexes for each environment
+
+||||||| merged common ancestors
+=======
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks # auto imports to active record to keep them synchronized
 
   index_name ["myflix", Rails.env].join('_') # create separate indexes for each environment
 
+>>>>>>> elastic-search
   belongs_to :category
   has_many :reviews, -> { order 'created_at DESC'}
   has_many :queue_items
